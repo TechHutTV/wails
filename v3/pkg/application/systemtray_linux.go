@@ -718,9 +718,6 @@ func (s *linuxSystemTray) Event(id int32, eventID string, data dbus.Variant, tim
 			gtkDispatch(item.menuItem.handleClick)
 		}
 	case "opened":
-		if s.parent.clickHandler != nil {
-			s.parent.clickHandler()
-		}
 		if s.parent.onMenuOpen != nil {
 			s.parent.onMenuOpen()
 		}
